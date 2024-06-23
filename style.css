@@ -9,15 +9,15 @@ body {
     padding: 20px;
 }
 .main-content {
-    max-width: 60%;
+    max-width: 65%;
 }
 .sidebar {
     max-width: 20%;
 }
 img {
-    border-radius: 50%;
+    border-radius: 0%
+    ;
     width: 150px;
-    height: 150px;
 }
 .email {
     margin-top: 20px;

@@ -2,6 +2,13 @@
   "content": [
     {
       "author": "Unknown",
+      "content": "Content extraction failed",
+      "category": "AI Research",
+      "dateAdded": "2025-12-29",
+      "link": "https://x.com/robjama/status/2005349567798100110?s=20"
+    },
+    {
+      "author": "Unknown",
       "content": "A deep dive into Claude Code 2.0 features, Opus 4.5 workflows, and context engineering. Learn sub-agents, MCP servers, hooks, skills, and practical tips to boost your AI-assisted coding productivity.",
       "category": "AI Tool",
       "dateAdded": "2025-12-29",
@@ -49,5 +56,5 @@
     }
   ],
   "people": [],
-  "lastUpdated": "2025-12-29T01:32:49.012Z"
+  "lastUpdated": "2025-12-29T17:43:11.186Z"
 }

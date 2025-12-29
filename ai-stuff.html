@@ -125,7 +125,7 @@
                         <td><strong>${item.title}</strong></td>
                         <td>${item.prompt}</td>
                         <td>${item.category}</td>
-                        <td>${item.source || 'N/A'}</td>
+                        <td>${item.source ? `<a href="${item.source}" target="_blank" class="source-link">View Source</a>` : 'N/A'}</td>
                         <td>${item.dateAdded}</td>
                     `;
                 } else if (tableId === 'people-table') {

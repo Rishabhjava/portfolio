@@ -10,10 +10,10 @@
     <div class="container">
         <div class="main-content">
             <h1>AI Stuff</h1>
-            <p>A running catalog of AI tweets, tools, prompts, and people that I find interesting.</p>
+            <p>A running catalog of AI content, tools, prompts, and people that I find interesting.</p>
             
-            <h2>Tweets</h2>
-            <table id="tweets-table">
+            <h2>Content</h2>
+            <table id="content-table">
                 <thead>
                     <tr>
                         <th>Author</th>
@@ -89,7 +89,7 @@
         fetch('./ai-data.json')
             .then(response => response.json())
             .then(data => {
-                populateTable('tweets-table', data.tweets);
+                populateTable('content-table', data.content);
                 populateTable('tools-table', data.tools);
                 populateTable('prompts-table', data.prompts);
                 populateTable('people-table', data.people);
@@ -105,11 +105,11 @@
             items.forEach(item => {
                 const row = document.createElement('tr');
                 
-                if (tableId === 'tweets-table') {
+                if (tableId === 'content-table') {
                     row.innerHTML = `
                         <td>${item.author}</td>
                         <td>${item.content}</td>
-                        <td><a href="${item.link}" target="_blank">View Tweet</a></td>
+                        <td><a href="${item.link}" target="_blank">View Content</a></td>
                         <td>${item.dateAdded}</td>
                     `;
                 } else if (tableId === 'tools-table') {

@@ -1,0 +1,31 @@
+{
+  "tweets": [
+    {
+      "author": "@karpathy",
+      "content": "I've never felt this much behind as a programmer. The profession is being dramatically refactored as the bits contributed by the programmer are increasingly sparse and between. I have a sense that I could be 10X more powerful if I just properly string together what has become available over the last ~year and a failure to claim the boost feels decidedly like skill issue. There's a new programmable layer of abstraction to master (in addition to the usual layers below) involving agents, subagents, their prompts, contexts, memory, modes, permissions, tools, plugins, skills, hooks, MCP, LSP, slash commands, workflows, IDE integrations, and a need to build an all-encompassing mental model for strengths and pitfalls of fundamentally stochastic, fallible, unintelligible and changing entities suddenly intermingled with what used to be good old fashioned engineering. Clearly some powerful alien tool was handed around except it comes with no manual and everyone has to figure out how to hold it and operate it, while the resulting magnitude 9 earthquake is rocking the profession. Roll up your sleeves to not fall behind.",
+      "link": "https://x.com/karpathy/status/2004607146781278521",
+      "dateAdded": "2025-12-28",
+      "category": "AI Research"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Sleek",
+      "description": "AI-powered mobile app design generator that turns your ideas into beautiful app designs in minutes without hiring a designer",
+      "category": "Design",
+      "link": "https://sleek.design",
+      "dateAdded": "2025-12-28",
+      "features": ["AI-driven app mockup creation", "Export to code or Figma", "iOS and Android support"]
+    }
+  ],
+  "prompts": [
+    {
+      "title": "SPEC.md Interview Tool",
+      "prompt": "read this @SPEC.md and interview me in detail using the AskUserQuestionTool about literally anything: technical implementation, UI & UX, concerns, tradeoffs, etc. but make sure the questions are not obvious. be very in-depth and continue interviewing me continually until it's complete, then write the spec to the file",
+      "category": "Development",
+      "source": "https://x.com/trq212/status/2005315275026260309",
+      "dateAdded": "2025-12-28"
+    }
+  ],
+  "people": []
+}

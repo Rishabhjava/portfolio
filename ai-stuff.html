@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Stuff - Rishabh Java</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>AI Stuff</h1>
+            <p>A running catalog of AI tweets, tools, prompts, and people that I find interesting.</p>
+            
+            <h2>Tweets</h2>
+            <table id="tweets-table">
+                <thead>
+                    <tr>
+                        <th>Author</th>
+                        <th>Content</th>
+                        <th>Link</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <h2>Tools</h2>
+            <table id="tools-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Link</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <h2>Prompts</h2>
+            <table id="prompts-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Prompt</th>
+                        <th>Category</th>
+                        <th>Source</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <h2>People</h2>
+            <table id="people-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Notable For</th>
+                        <th>Link</th>
+                        <th>Date Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="sidebar">
+            <ul>
+                <li><a href="/">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/media.html">Media</a></li>
+                <li><a href="/ai-stuff.html">AI Stuff</a></li>
+                <li><a href="#">Thoughts</a></li>
+                <li><a href="#">Travel</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Load and populate data from JSON
+        fetch('./ai-data.json')
+            .then(response => response.json())
+            .then(data => {
+                populateTable('tweets-table', data.tweets);
+                populateTable('tools-table', data.tools);
+                populateTable('prompts-table', data.prompts);
+                populateTable('people-table', data.people);
+            })
+            .catch(error => {
+                console.error('Error loading AI data:', error);
+            });
+
+        function populateTable(tableId, items) {
+            const table = document.getElementById(tableId);
+            const tbody = table.querySelector('tbody');
+            
+            items.forEach(item => {
+                const row = document.createElement('tr');
+                
+                if (tableId === 'tweets-table') {
+                    row.innerHTML = `
+                        <td>${item.author}</td>
+                        <td>${item.content}</td>
+                        <td><a href="${item.link}" target="_blank">View Tweet</a></td>
+                        <td>${item.dateAdded}</td>
+                    `;
+                } else if (tableId === 'tools-table') {
+                    row.innerHTML = `
+                        <td><strong>${item.name}</strong></td>
+                        <td>${item.description}</td>
+                        <td>${item.category}</td>
+                        <td><a href="${item.link}" target="_blank">Visit</a></td>
+                        <td>${item.dateAdded}</td>
+                    `;
+                } else if (tableId === 'prompts-table') {
+                    row.innerHTML = `
+                        <td><strong>${item.title}</strong></td>
+                        <td>${item.prompt}</td>
+                        <td>${item.category}</td>
+                        <td>${item.source || 'N/A'}</td>
+                        <td>${item.dateAdded}</td>
+                    `;
+                } else if (tableId === 'people-table') {
+                    row.innerHTML = `
+                        <td><strong>${item.name}</strong></td>
+                        <td>${item.description}</td>
+                        <td>${item.notableFor}</td>
+                        <td><a href="${item.link}" target="_blank">Profile</a></td>
+                        <td>${item.dateAdded}</td>
+                    `;
+                }
+                
+                tbody.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>

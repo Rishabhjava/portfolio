@@ -10,12 +10,26 @@
   ],
   "tools": [
     {
+      "name": "Test AI Tool",
+      "description": "A test entry to verify GitHub integration",
+      "category": "Testing",
+      "features": [
+        "Integration test"
+      ],
+      "dateAdded": "2025-12-29",
+      "link": "https://example.com"
+    },
+    {
       "name": "Sleek",
       "description": "AI-powered mobile app design generator that turns your ideas into beautiful app designs in minutes without hiring a designer",
       "category": "Design",
       "link": "https://sleek.design",
       "dateAdded": "2025-12-28",
-      "features": ["AI-driven app mockup creation", "Export to code or Figma", "iOS and Android support"]
+      "features": [
+        "AI-driven app mockup creation",
+        "Export to code or Figma",
+        "iOS and Android support"
+      ]
     }
   ],
   "prompts": [
@@ -27,5 +41,6 @@
       "dateAdded": "2025-12-28"
     }
   ],
-  "people": []
+  "people": [],
+  "lastUpdated": "2025-12-29T00:37:51.517Z"
 }
